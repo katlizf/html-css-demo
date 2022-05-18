@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Inputs</title>
+</head>
+<body>
+    <form action="process.php">
+        <!-- action is where the form will be submitted to, like a php file-->
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name">
+            <!-- giving input id the same as label for can allow the user to click on the label and then the input is highlighted and the cursor moves into the input -->
+            <!-- name attribute is used on the server side, like php, to grab the value -->
+        </div>
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email">
+            <!-- type="email" provides validation that input must be an email -->
+        </div>
+        <div>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" cols="50" rows="5"></textarea>
+            <!-- cols(width) and rows(height) increases the size of the textarea -->
+        </div>
+        <div>
+            <label for="sex">Sex</label><br>
+            <select name="sex" id="sex">
+                <option value="male">Mail</option>
+                <option value="female" selected>Female</option>
+                <option value="other">Other</option>
+                <!-- selected automatically sets input to that option -->
+            </select>
+        </div>
+        <div>
+            <label for="age">Age</label><br>
+            <input type="number" name="age" id="age">
+            <!-- input field will have arrows to increase and decrease -->
+        </div>
+        <div>
+            <label for="birthdate">birthdate</label><br>
+            <input type="date" name="birthdate" id="birthdate">
+            <!-- attribute type="date" will format input field with mm/dd/yyy and provide a calendar picker for user to use -->
+        </div>
+        <div>
+            <label for="membership">Membership</label><br>
+            <input type="radio" name="membership" value="simple" id="membership">Simple
+            <input type="radio" name="membership" value="standard" id="membership" checked>Standard
+            <input type="radio" name="membership" value="super" id="membership">Super
+            <!-- can add label for radio buttons without label element but just typing the label after the input closing > -->
+            <!-- checked automatically sets that radio as filled in -->
+        </div>
+        <div>
+            <label for="likes">I Like...</label><br>
+            <input type="checkbox" name="likes" value="bike" id="likes">Bike
+            <input type="checkbox" name="likes" value="car" id="likes">Car
+            <input type="checkbox" name="likes" value="boat" id="likes">Boat
+        </div>
+        <input type="submit" value="Submit">
+        <!-- or <button type="submit">Submit</button> -->
+        <button type="reset">Reset</button>
+        <!-- will clear all input values -->
+    </form>
+</body>
+</html>

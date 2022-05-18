@@ -1,0 +1,6 @@
+h3 {
+    color:blueviolet !important;
+}
+/* !important will designate that style to override other styling */
+
+/* can use negative pixels with margin sytling to move things */
